@@ -4,7 +4,8 @@
     "description": "My test package",
     "keywords": [
         "slavensaka",
-        "mypackage"
+        "mypackage",
+        "laravel"
     ],
     "homepage": "https://github.com/slavensaka/mypackage",
     "license": "MIT",
@@ -26,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "slavensaka\\mypackage\\": "packages/slavensaka/mypackage/src"
+            "slavensaka\\mypackage\\": "src/"
         }
     },
     "autoload-dev": {

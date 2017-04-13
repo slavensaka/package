@@ -13,8 +13,10 @@ class mypackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    	$this->loadMigrationsFrom(__DIR__ . '/Migrations');
     	$this->loadRoutesFrom(__DIR__ . '/Routes/routes.php');
         $this->publishes([__DIR__ . '/Config/mypackage.php' => config_path('mypackage.php')], 'config');
+        $this->publishes([__DIR__ . '/Assets' => public_path('vendor/mypackage'),], 'public');
         $this->loadTranslationsFrom(__DIR__ . '/Lang', 'mypackage');
 
     }

@@ -1,7 +1,7 @@
 {
     "name": "slavensaka/mypackage",
     "type": "library",
-    "description": ":package_description",
+    "description": "My test package",
     "keywords": [
         "slavensaka",
         "mypackage"
@@ -10,9 +10,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Slaven Sakačić",
+            "email": "slavensakacic@gmail.com",
+            "homepage": "https://slavensakacic.com",
             "role": "Developer"
         }
     ],
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "slavensaka\\mypackage\\": "src"
+            "slavensaka\\mypackage\\": "packages/slavensaka/mypackage/src"
         }
     },
     "autoload-dev": {

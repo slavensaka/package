@@ -13,7 +13,7 @@ class mypackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([__DIR__ . '/Config/mypackage.php' => config_path('mypackage.php')], 'config');
     }
 
     /**
@@ -23,6 +23,7 @@ class mypackageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+    	$this->mergeConfigFrom( __DIR__. '/Config/mypackage.php', 'mypackage');
+		$this->app->instance('mypackage', new mypackage);
     }
 }

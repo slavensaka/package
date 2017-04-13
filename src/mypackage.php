@@ -7,6 +7,7 @@ class myPackage {
 	 * @return type
 	 */
 	public static function saySomething(){
-		return config('mypackage.message');
+		// return config('mypackage.message');
+		return trans('mypackage::messages.greeting');
 	}
 }

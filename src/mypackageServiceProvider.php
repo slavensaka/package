@@ -13,7 +13,10 @@ class mypackageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    	$this->loadRoutesFrom(__DIR__ . '/Routes/routes.php');
         $this->publishes([__DIR__ . '/Config/mypackage.php' => config_path('mypackage.php')], 'config');
+        $this->loadTranslationsFrom(__DIR__ . '/Lang', 'mypackage');
+
     }
 
     /**
@@ -24,6 +27,7 @@ class mypackageServiceProvider extends ServiceProvider
     public function register()
     {
     	$this->mergeConfigFrom( __DIR__. '/Config/mypackage.php', 'mypackage');
+    	$this->loadViewsFrom(__DIR__ . '/Views', 'mypackage');
 		$this->app->instance('mypackage', new mypackage);
     }
 }
